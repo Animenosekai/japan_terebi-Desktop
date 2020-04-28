@@ -4,7 +4,7 @@
 ## Only works on macOS
 
 ### Instructions
-- Download the zip file or clone this repository
+- Download the zip file or clone this repository (and unzip if needed)
 - Open the Installation file ` "Japan Terebi - Installation File" `
 - During the installation, you will be prompted to press the enter key twice
 - You can then open any of the TV Channels available
