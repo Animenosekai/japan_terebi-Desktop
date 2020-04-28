@@ -1,0 +1,265 @@
+#!/bin/sh
+
+clear
+echo ""
+echo "                          Japan Terebi - Local Edition"
+echo ""
+echo ""
+echo "  Anime no Sekai© - 2020"
+echo ""
+sleep 1
+echo "  Disclaimer: This program should only be used for private and educational purposes"
+sleep 1
+echo ""
+echo ""
+
+FILE=~/.config/mpv/mpv.conf
+if [ -f "$FILE" ]; then
+    echo "You already installed the program"
+else
+    echo ""
+    echo ""
+    echo ""
+    sleep 1
+    echo "The installation will now start!"
+    sleep 1
+    echo "You have almost nothing to do during the installation (yea that's pretty cool)"
+    echo "(you may see lots of messages though, especially while installing the dependencies)"
+
+    echo ""
+    sleep 1
+    echo "   You'll need to wait until the program finishes to install everything"
+    echo "(until you see a 'Done!' message)"
+    sleep 2
+    read -p "Press [Return/Enter] key to start the installation..."
+
+    echo ""
+    echo ""
+    echo ""
+
+    #Homebrew
+    echo "Downloading and installing Homebrew to install all needed dependencies..."
+    clear
+    echo  '##                       (15%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+
+    echo ""
+    echo ""
+    echo ""
+
+    #mpv
+    clear
+    echo '#####                    (25%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)..."
+    brew install mpv &>/dev/null
+
+    echo ""
+    echo ""
+    echo ""
+
+    #Streamlink
+    clear
+    echo '######                   (33%)\r'
+    echo "__________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program..."
+
+    brew install streamlink &>/dev/null
+    clear
+    echo  '#######                 (36%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program..."
+
+    brew install jq &>/dev/null
+    clear
+    echo  '########                (38%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program..."
+
+
+    echo ""
+    echo ""
+    echo ""
+
+    #Installing the player configurations, shaders and scripts
+    rm -r ~/.config/mpv
+    DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &>/dev/null 2>&1 && pwd )"
+    cp -r "${DIR}/PlayerConfigurationFiles" ~/.config/mpv
+    rm -r "${DIR}/PlayerConfigurationFiles"
+
+    clear
+    echo  '############            (55%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts..."
+
+
+    echo ""
+    echo ""
+    echo ""
+
+    #Installing the dependencies
+    clear
+    echo  '############            (55%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+
+    brew tap bl4cc4t/vsplugins &>/dev/null
+    clear
+    echo  '############            (56%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+    
+    clear
+    echo  '#############           (58%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+
+        
+    clear
+    echo  '#############           (60%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+    brew install --HEAD vsp-nnedi3 &>/dev/null
+
+        
+    clear
+    echo  '#############           (62%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+    brew install --HEAD vsp-flash3kyuu_deband &>/dev/null
+
+        
+    clear
+    echo  '#############           (64%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+    brew install --HEAD vsp-tdeintmod &>/dev/null
+
+        
+    clear
+    echo  '##############          (66%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+    brew tap noctem/vapoursynth &>/dev/null
+
+        
+    clear
+    echo  '###############         (68%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+    brew install --HEAD fmtconv &>/dev/null
+
+        
+    clear
+    echo  '################        (70%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work..."
+    brew install --HEAD vs-mvtools &>/dev/null
+
+    clear
+    echo  '#################       (75%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work... Done"
+    echo "Linking the dependencies..."
+
+    #linking the dependencies
+    /usr/local/Homebrew/Library/Taps/bl4cc4t/homebrew-vsplugins/linkvsp.sh &>/dev/null
+        
+    clear
+    echo  '#####################   (90%)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work... Done"
+    echo "Linking the dependencies..."
+    sleep 1
+
+    echo ""
+    echo ""
+    echo ""
+
+    clear
+    echo  '########################(100%!)\r'
+    echo "___________________________________"
+    echo "Homebrew Installation... Done"
+    echo "Installing the player (mpv)... Done"
+    echo "Installing the streaming link finder program... Done"
+    echo "Installing the player configurations, shaders and scripts... Done"
+    echo "Installing all the dependencies for the scripts to work... Done"
+    echo "Linking the dependencies... Done"
+    sleep 2
+    echo ""
+
+    echo "Done!✨"
+    echo ""
+    echo ""
+fi
+
+sleep 2
+echo "All you need to do now is opening the file corresponding to the TV channel you wanna watch!"
+echo ""
+echo ""
+echo ""
+
+sleep 2
+echo "Thank's for using this program"
+echo ""
+echo "             - Anime no Sekai "
+echo ""
+echo ""
+sleep 5

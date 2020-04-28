@@ -1,0 +1,11 @@
+clear
+echo "Opening Yahoo!JP TV Guide in your default browser..."
+open http://japanterebi.netlify.app/tvchannels/redirect/tvguide
+
+echo ""
+echo "Nice!"
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""

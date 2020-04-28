@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+NONE='\033[00m'
+RED='\033[01;31m'
+UNDERLINE='\033[4m'
+
+clear
+echo "Loading the player..."
+echo ""
+echo ""
+
+link=$(curl -s 'https://jsonblob.com/api/jsonBlob/8d462070-78d2-11ea-8599-21f0f9a3ea71' | jq -r '.tokyomx')
+
+echo "Found link: ${link}"
+echo ""
+
+echo " Here are all the commands"
+echo "_________________________________"
+echo " 'g' --> Enabling the smoothner (motion interpolation)"
+echo " 'G' --> Enabling all the smoothning and video enhancement filters (powerful CPU needed)"
+echo " 'f' --> Toggle fullscreen"
+echo "'up' --> Volume up"
+echo "'down'-> Volume down"
+echo " '+' --> Add audio-delay (100ms)"
+echo " '-' --> Add audio-delay (-100ms)"
+echo " 'a' --> Toggle mute"
+echo " 's' --> Toggle subtitles (if available)"
+echo " 'i' --> Toggling interpolation"
+echo "'F4' --> Change aspect ratio"
+
+
+echo ""
+echo "Starting the player..."
+echo ""
+
+streamlink $link best -l warning -t Japan\ Terebi\ -\ Tokyo\ MX --player=mpv
+echo ""
+echo ""
+echo ""
+echo -e "${UNDERLINE}If error: 'No plugin can handle URL' or 'No playable streams found on this URL' happens, the URL might not be updated yet.${NONE}"
+echo "Try visiting https://dev-japanterebi.netlify.com/devtools/sources-check and check the channel you want to watch"
+echo "Or contact me"
+echo ""
+
+

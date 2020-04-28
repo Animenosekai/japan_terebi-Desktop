@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+clear
+
+changing_profile(){
+    echo "What are you going to watch next? [Type 'Anime' or 'Movie']"
+    read -p "> " profile
+    profile=$(echo "$profile" | tr "[A-Z]" "[a-z]")
+
+    if [ "$profile" == "anime" ] || [ "$profile" == "nime" ] || [ "$profile" == "anme" ] || [ "$profile" == "aime" ] || [ "$profile" == "anie" ] || [ "$profile" == "anim" ] || [ "$profile" == "ani" ] || [ "$profile" == "anime4k" ]; then
+        echo ""
+        echo "Changing the profile to anime (Anime4k)..."
+        cp ~/.config/mpv/Profiles/anime_mpv.conf ~/.config/mpv/mpv.conf
+        echo ""
+        sleep 1
+        echo "Done!✨"
+        echo ""
+        killall mpv &>/dev/null
+        echo "If you were watching a channel please reopen it."
+        echo "(the player needed to restart to apply the new profile)"
+        echo ""
+    elif [ "$profile" == "movie" ] || [ "$profile" == "ovie" ] || [ "$profile" == "mvie" ] || [ "$profile" == "moie" ] || [ "$profile" == "move" ] || [ "$profile" == "movi" ] || [ "$profile" == "mov" ] || [ "$profile" == "sssr" ] || [ "$profile" == "movie-sssr" ] || [ "$profile" == "ssr" ] || [ "$profile" == "sssr-movie" ] || [ "$profile" == "real" ]; then
+        echo ""
+        echo "Changing the profile to movie (sssr)..."
+        cp ~/.config/mpv/Profiles/movie-sssr_mpv.conf ~/.config/mpv/mpv.conf
+        echo ""
+        sleep 1
+        echo "Done!✨"
+        echo ""
+        killall mpv &>/dev/null
+        echo "If you were watching a channel please reopen it."
+        echo "(the player needed to restart to apply the new profile)"
+        echo ""
+    elif [ "$profile" == "anime-ultra" ] || [ "$profile" == "ultra-anime" ] || [ "$profile" == "ani-ultra" ] || [ "$profile" == "anime-other" ] || [ "$profile" == "other-anime" ] || [ "$profile" == "anime4k-ultra" ] || [ "$profile" == "anime4k ultra" ]; then
+        echo ""
+        echo "Changing the profile to anime (Anime4k-Ultra)..."
+        cp ~/.config/mpv/Profiles/anime-ultra_mpv.conf ~/.config/mpv/mpv.conf
+        echo ""
+        sleep 1
+        echo "Done!✨"
+        echo ""
+        killall mpv &>/dev/null
+        echo "If you were watching a channel please reopen it."
+        echo "(the player needed to restart to apply the new profile)"
+        echo ""
+    elif [ "$profile" == "movie-other" ] || [ "$profile" == "mov-other" ] || [ "$profile" == "other-movie" ] || [ "$profile" == "other-mov" ] || [ "$profile" == "fsrcnnx" ] || [ "$profile" == "movie-fsrcnnx" ] || [ "$profile" == "fsrcnnx-movie" ] || [ "$profile" == "real-fsrcnnx" ] || [ "$profile" == "other movie" ] || [ "$profile" == "movie other" ]; then
+        echo ""
+        echo "Changing the profile to movie (fsrcnnx)..."
+        cp ~/.config/mpv/Profiles/movie-fsrcnnx_mpv.conf ~/.config/mpv/mpv.conf
+        echo ""
+        sleep 1
+        echo "Done!✨"
+        echo ""
+        killall mpv &>/dev/null
+        echo "If you were watching a channel please reopen it."
+        echo "(the player needed to restart to apply the new profile)"
+        echo ""
+    else
+        echo ""
+        echo "Sorry, I couldn't recognize which profile you wanna apply"
+        echo "Please try again."
+        echo ""
+        changing_profile
+    fi
+}
+
+if [ -f ~/.config/mpv/Profiles/anime_mpv.conf ]; then
+    changing_profile
+else
+    echo "You haven't installed the program yet!"
+    echo ""
+    echo "Try to install the program before and come back later."
+    echo ""
+    echo ""
+fi
