@@ -27,3 +27,17 @@ The `change profile` file is a file used to change the filter profile (upscale m
 - `anime-ultra` (with more filters from the Anime4k algorithm)
 - `movie` (for real life footage, casual tv shows - with the SSimSuperRes algorithm)
 - `movie-other` (same but with the FSRCNNX algorithm)
+
+
+### Player Commands
+- `g` --> Enabling the smoothner (motion interpolation)
+- `G` (shift-g) --> Enabling all the smoothning and video enhancement filters (powerful CPU needed)
+- `f` --> Toggle fullscreen
+- `up` --> Volume up
+- `down`-> Volume down
+- `+` --> Add audio-delay (100ms)
+- `-` --> Add audio-delay (-100ms)
+- `a` --> Toggle mute
+- `s` --> Toggle subtitles (if available)
+- `i` --> Toggling interpolation
+- `F4` --> Change aspect ratio
