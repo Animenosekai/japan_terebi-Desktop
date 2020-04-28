@@ -255,7 +255,15 @@ echo "All you need to do now is opening the file corresponding to the TV channel
 echo ""
 echo ""
 echo ""
-
+echo "Do you want to delete the installation file? ['yes' or 'no']"
+read -p "> " decision
+decision=$(echo "$decision" | tr "[A-Z]" "[a-z]")
+if [ "$decision" == "yes" ]; then
+    DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &>/dev/null 2>&1 && pwd )"
+    rm "${DIR}/Japan Terebi - Installation File"
+fi
+echo ""
+echo ""
 sleep 2
 echo "Thank's for using this program"
 echo ""
