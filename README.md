@@ -4,6 +4,14 @@
 ## Only works on macOS
 
 ### Instructions
+For the normal installation:
+- Download Japan Terebi for macOS at this address: [Japan Terebi for macOS [v2].dmg](https://japanterebi.netlify.app/assets/application/desktop/macOS/download/Japan_Terebi_for_macOS_[v2].dmg)
+- Open the `.dmg` file
+- Put the installation file inside of the `Applications` folder.
+- Open the installation file inside of the `Applications` folder.
+A `README.md` file is available in the `.dmg` file if you encounter any problem.
+
+For the raw scripts:
 - Download the zip file or clone this repository (and unzip if needed)
 - Open the Installation file ` "Japan Terebi - Installation File" `
 - During the installation, you will be prompted to press the enter key twice
